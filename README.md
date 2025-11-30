@@ -79,19 +79,20 @@ Clean, animated UI
 
 .
 ├── app/
-│   └── streamlit_app.py          # Streamlit UI
+│   └── streamlit_app.py          # Streamlit UI application
 │
 ├── src/
-│   ├── bb84.py                   # Core BB84 logic
-│   ├── noise_models.py           # Noise functions
-│   ├── eavesdropper.py           # Eve behavior
-│   ├── ml_detector.py            # ML QBER classifier
+│   ├── bb84.py                   # Core BB84 protocol logic
+│   ├── noise_models.py           # Quantum noise models
+│   ├── eavesdropper.py           # Eve attack simulation
+│   ├── ml_detector.py            # Machine learning model for QBER anomaly detection
 │   └── __pycache__/
 │
 ├── notebooks/
-│   └── demo.ipynb                # Example notebook
+│   └── demo.ipynb                # Notebook demonstration
 │
-├── assets/                       # Images / diagrams (optional)
+├── assets/                       # Images, diagrams (optional)
+│
 ├── tests/                        # Unit tests (optional)
 │
 ├── requirements.txt
@@ -99,7 +100,45 @@ Clean, animated UI
 ├── LICENSE
 └── .gitignore
 
+
 🚀 Run Locally
-1. Clone the repository
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+1️⃣ Clone the repository
+git clone https://github.com/<Naveen-das09>/<BB84-Simulation-Demo>.git
+cd <BB84-Simulation-Demo>
+
+2️⃣ Create a Virtual Environment
+python -m venv .venv
+source .venv/bin/activate      # Mac/Linux
+.\.venv\Scripts\activate       # Windows
+
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+
+4️⃣ Run Streamlit App
+streamlit run app/streamlit_app.py
+
+🔍 BB84 Protocol — Quick Explanation
+
+Alice generates random bits.
+
+Alice chooses random bases (X/Z) for each bit.
+
+Alice prepares qubits in chosen bases and sends them to Bob.
+
+Bob measures qubits in his own random bases.
+
+Alice & Bob publicly compare bases (not bit values).
+
+Matching basis bits form the sifted key.
+
+🛠 Future Improvements
+
+Real IBM Quantum hardware backend
+
+LDPC error correction
+
+Privacy amplification
+
+Docker deployment
+
+API endpoints for programmatic BB84 use

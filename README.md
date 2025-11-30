@@ -103,18 +103,22 @@ Clean, animated UI
 
 🚀 Run Locally
 1️⃣ Clone the repository
+
 git clone https://github.com/<Naveen-das09>/<BB84-Simulation-Demo>.git
 cd <BB84-Simulation-Demo>
 
 2️⃣ Create a Virtual Environment
+
 python -m venv .venv
 source .venv/bin/activate      # Mac/Linux
 .\.venv\Scripts\activate       # Windows
 
 3️⃣ Install Dependencies
+
 pip install -r requirements.txt
 
 4️⃣ Run Streamlit App
+
 streamlit run app/streamlit_app.py
 
 🔍 BB84 Protocol — Quick Explanation

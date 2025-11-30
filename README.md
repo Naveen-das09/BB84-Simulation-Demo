@@ -77,6 +77,7 @@ Eve intensity sliders
 
 Clean, animated UI
 
+```bash
 .
 ├── app/
 │   └── streamlit_app.py          # Streamlit UI application
@@ -99,30 +100,30 @@ Clean, animated UI
 ├── README.md
 ├── LICENSE
 └── .gitignore
-
+```
 
 🚀 Run Locally
 1️⃣ Clone the repository
-
+```bash
 git clone https://github.com/<Naveen-das09>/<BB84-Simulation-Demo>.git
 cd <BB84-Simulation-Demo>
-
+```
 2️⃣ Create a Virtual Environment
-
+```bash
 python -m venv .venv
 
 source .venv/bin/activate        # Mac/Linux
 
 .\.venv\Scripts\activate         # Windows
-
+```
 3️⃣ Install Dependencies
-
+```bash
 pip install -r requirements.txt
-
+```
 4️⃣ Run Streamlit App
-
+```bash
 streamlit run app/streamlit_app.py
-
+```
 🔍 BB84 Protocol — Quick Explanation
 
 Alice generates random bits.

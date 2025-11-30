@@ -1,38 +1,41 @@
 🧪 BB84 Quantum Key Distribution — Qiskit + Streamlit Demo
 
-A complete, interactive demonstration of the BB84 Quantum Key Distribution (QKD) protocol built with:
+This project is an interactive demonstration of the BB84 Quantum Key Distribution (QKD) protocol using:
 
-✅ Python
-✅ Qiskit (Aer simulator)
-✅ Streamlit UI
-✅ Custom noise models
-✅ Eavesdropper simulation (Eve)
-✅ ML-based QBER anomaly detector
+Python
 
-This project simulates how Alice and Bob establish a secure quantum key, how noise & eavesdropping affect QBER, and visualizes the full protocol step-by-step.
+Qiskit (Aer simulator)
 
-🎯 Features
-🔹 1. Full BB84 Protocol Simulation
+Streamlit UI
 
-Random bit generation
+Custom noise models
 
-Random basis selection (X/Z)
+Eavesdropper (Eve) simulation
+
+ML-based QBER anomaly detection
+
+It shows how Alice and Bob establish a secure quantum key, how noise & eavesdropping affect QBER, and visualizes the protocol step-by-step.
+
+⭐ Features
+✔ Full BB84 Protocol Implementation
+
+Random bit + basis generation
 
 Qubit preparation
 
-Transmission through noise models
+Noise simulation
 
-Measurement by Bob
+Bob’s measurements
 
 Basis reconciliation
 
-Sifting
+Key sifting
 
-QBER computation
+QBER calculation
 
-🔹 2. Noise Models Implemented
+✔ Noise Models
 
-Inside noise_models.py:
+Implemented in noise_models.py:
 
 Depolarizing noise
 
@@ -42,89 +45,61 @@ Phase-flip noise
 
 Custom combined noise
 
-You can toggle noise strength from the Streamlit UI.
+✔ Eavesdropper Simulation
 
-🔹 3. Eavesdropper (Eve) Simulation
+eavesdropper.py supports:
 
-eavesdropper.py simulates different types of Eve:
+Intercept-Resend attack
 
-Intercept–Resend
-
-Measurement in random bases
-
-Measurement in chosen basis
+Random basis Eve
 
 Aggressive Eve (high disturbance)
 
-Eve automatically increases QBER — visually shown.
+✔ Machine-Learning Attack Detection
 
-🔹 4. Machine Learning QBER Detector
+ml_detector.py includes:
 
-Your ml_detector.py includes an ML model that predicts abnormal QBER spikes:
+Logistic Regression model
 
-Logistic regression classifier
+Detects “normal noise” vs “probable attack”
 
-Detects “attack vs no attack”
+Displays result in the UI
 
-Shown live in UI boxes
+✔ Streamlit Interface
 
-🔹 5. Beautiful Streamlit UI
+Live protocol visualization
 
-app/streamlit_app.py includes:
+QBER alerts
 
-Animated QBER alerts
+Interactive noise sliders
 
-Highlighted key differences
+Eve intensity sliders
 
-Step-by-step visual guide
+Clean, animated UI
 
-Real-time measurement results
-
-📂 Project Structure
 .
 ├── app/
-│   └── streamlit_app.py         # UI application
+│   └── streamlit_app.py          # Streamlit UI
 │
 ├── src/
-│   ├── bb84.py                  # core BB84 protocol logic
-│   ├── noise_models.py          # depolarization, bitflip, etc.
-│   ├── eavesdropper.py          # Eve simulations
-│   ├── ml_detector.py           # ML model to detect anomalies
+│   ├── bb84.py                   # Core BB84 logic
+│   ├── noise_models.py           # Noise functions
+│   ├── eavesdropper.py           # Eve behavior
+│   ├── ml_detector.py            # ML QBER classifier
 │   └── __pycache__/
 │
-├── assets/                      # images, diagrams (optional)
-│
 ├── notebooks/
-│   └── demo.ipynb               # Jupyter demonstration
+│   └── demo.ipynb                # Example notebook
 │
-├── tests/                       # unit tests (optional)
+├── assets/                       # Images / diagrams (optional)
+├── tests/                        # Unit tests (optional)
 │
-├── README.md
 ├── requirements.txt
+├── README.md
 ├── LICENSE
 └── .gitignore
 
-🚀 How to Run
+🚀 Run Locally
 1. Clone the repository
-git clone https://github.com/<your-username>/bb84-qiskit-streamlit.git
-cd bb84-qiskit-streamlit
-
-2. Create a virtual environment
-python -m venv .venv
-source .venv/bin/activate   # Mac/Linux
-.\.venv\Scripts\activate    # Windows
-
-3. Install dependencies
-pip install -r requirements.txt
-
-4. Run the Streamlit app
-streamlit run app/streamlit_app.py
-
-
-You will see something like:
-
-Local URL: http://localhost:8501
-Network URL: http://172.xx.xx.xx:8501
-
-
-Open it in your browser, and you're ready to explore the quantum world ⭐
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>

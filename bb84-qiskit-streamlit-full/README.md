@@ -1,6 +1,6 @@
 # BB84 Quantum Key Distribution — Qiskit + Streamlit (Cyber-security Theme)
 
-Polished BB84 demo using Qiskit and a Streamlit dashboard with a cyber-security, dark-themed presentation style.
+ BB84 demo using Qiskit and a Streamlit dashboard with a cyber-security, dark-themed presentation style.
 Features:
 
 - BB84 protocol simulation (simple, noise, intercept-resend eavesdropping)

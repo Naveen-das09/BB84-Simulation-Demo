@@ -110,8 +110,10 @@ cd <BB84-Simulation-Demo>
 2️⃣ Create a Virtual Environment
 
 python -m venv .venv
-source .venv/bin/activate      # Mac/Linux
-.\.venv\Scripts\activate       # Windows
+
+source .venv/bin/activate        # Mac/Linux
+
+.\.venv\Scripts\activate         # Windows
 
 3️⃣ Install Dependencies
 
